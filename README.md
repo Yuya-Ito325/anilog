@@ -6,5 +6,3 @@
 ## 使用言語
  JavaScript
 
-## API
- https://github.com/Project-ShangriLa/sora-playframework-scala
