@@ -4,21 +4,49 @@ const addButton = document.getElementById('add-button');
 const addName = document.getElementById('add-name');
 const nameList = document.getElementById('name-list');
 const animeList = document.getElementById('anime-list');
+let year = document.getElementById('year');
+let season = document.getElementById('season');
+let apiUrl = `http://api.moemoe.tokyo/anime/v1/master/${year.value}${season.value}`;
 const anime = [];
-const apiUrl = "http://api.moemoe.tokyo/anime/v1/master/2021";
 
+apiLoad(apiUrl);
+
+year.onchange = function(){
+    deleteList();
+    year = document.getElementById('year');
+    apiUrl = `http://api.moemoe.tokyo/anime/v1/master/${year.value}${season.value}`;
+    apiLoad(apiUrl);
+}
+
+season.onchange = function(){
+    deleteList();
+    season = document.getElementById('season');
+    apiUrl = `http://api.moemoe.tokyo/anime/v1/master/${year.value}${season.value}`;
+    apiLoad(apiUrl);
+}
+
+//アニメデータ消去
+function deleteList(){
+    const animeListCount = animeList.childElementCount;
+    for(let i=1; i <= animeListCount; i++){
+        animeList.querySelector("li button").remove();
+        animeList.querySelector("li").remove();
+    }
+}
 
 //apiデータを読み込み
-fetch(apiUrl)
-.then(respons => {
-    return respons.json();
-})
-.then(data => {
-    addAnimeList(data);
-})
-.catch(error => {
-    console.log("失敗しました");
-});
+function apiLoad(url){
+    fetch(url)
+    .then(respons => {
+        return respons.json();
+    })
+    .then(data => {
+        addAnimeList(data);
+    })
+    .catch(error => {
+        console.log("失敗しました");
+    });
+}
 
 //apiデータを受け取りリスト表示
 function addAnimeList (animeData){
