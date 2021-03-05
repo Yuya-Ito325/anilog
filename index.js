@@ -58,6 +58,7 @@ function addAnimeList (animeData){
     //追加ボタン
     const addButton = document.createElement('button');
     addButton.innerText = "視聴リストに追加"
+    addButton.classList.add('shine-btn');
     addButton.addEventListener('click', function(){
         anime.push(data[i].title);
         add.textContent = anime[anime.length-1];
