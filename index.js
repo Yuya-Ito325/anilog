@@ -52,14 +52,14 @@ function apiLoad(url){
 function addAnimeList (animeData){
     const data = animeData;
     for(let i=0; i <= Object.keys(data).length - 1; i++){
-    const add = document.createElement('li');
-    add.textContent = data[i].title;
-    animeList.appendChild(add);
-    //追加ボタン
-    const addButton = document.createElement('button');
-    addButton.innerText = "視聴リストに追加"
-    addButton.classList.add('shine-btn');
-    addButton.addEventListener('click', function(){
+        const add = document.createElement('li');
+        add.textContent = data[i].title;
+        animeList.appendChild(add);
+        //追加ボタン
+        const addButton = document.createElement('button');
+        addButton.innerText = "視聴リストに追加"
+        addButton.classList.add('shine-btn');
+        addButton.addEventListener('click', function(){
         anime.push(data[i].title);
         add.textContent = anime[anime.length-1];
         nameList.appendChild(add);
