@@ -78,24 +78,23 @@ function addAnimeList (animeData){
 
 //登録buttonをクリックでテキストボックスの文字をリスト化
 addButton.addEventListener('click',function(event){
-if(addName.value === ''|| addName === null){
-    alert ('文字を入力してください');
-    return;
-}else{
-    //リスト追加
-    const add = document.createElement('li');
-    const search = addName.value;
-    anime.push(search);
-    add.textContent = anime[anime.length -1];
-    nameList.appendChild(add);
-    addName.value = "";
+    if(addName.value === ''|| addName === null){
+        alert ('文字を入力してください');
+        return;
+    }else{
+        //リスト追加
+        const add = document.createElement('li');
+        const search = addName.value;
+        anime.push(search);
+         add.textContent = anime[anime.length -1];
+        nameList.appendChild(add);
+         addName.value = "";
 
-    //削除ボタン追加
-    const deleteButton = document.createElement('button');
-    deleteButton.innerText = '削除';
-    deleteButton.addEventListener('click', () => RemoveList(deleteButton));
-    add.appendChild(deleteButton);
-
+          //削除ボタン追加
+         const deleteButton = document.createElement('button');
+         deleteButton.innerText = '削除';
+         deleteButton.addEventListener('click', () => RemoveList(deleteButton));
+         add.appendChild(deleteButton);
 }
 });
 
