@@ -1,0 +1,34 @@
+html,
+body {
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.data-list {
+  height: 200px;
+}
+
+.ul-border {
+  border: 2px solid black;
+  border-right: transparent;
+  border-left: transparent;
+}
+
+.li-border {
+  border-bottom: 1px solid black;
+}
+
+.list-btn {
+  float: right;
+}
+
+ul li {
+  margin-bottom: 7px;
+}
