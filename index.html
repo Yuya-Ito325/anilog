@@ -5,34 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1>視聴予定アニメリスト</h1>
-    <ul id="name-list"></ul>
-    <input id="add-name" type="text">
-    <button id="add-button" type="button">アニメを登録</button>
-    <select name="year" id="year">
-        <option value="">西暦</option>
-        <option value="2021">2021</option>
-        <option value="2020">2020</option>
-        <option value="2019">2019</option>
-        <option value="2018">2018</option>
-        <option value="2017">2017</option>
-        <option value="2016">2016</option>
-        <option value="2015">2015</option>
-        <option value="2014">2014</option>
-    </select>
-　　<select name="season" id="season">
-        <option value="">季節</option>
-        <option value="/1">春</option>
-        <option value="/2">夏</option>
-        <option value="/3">秋</option>
-        <option value="/4">冬</option>
-    </select>
-    <div>
-        <ul id="anime-list"></ul>
+    <div class=" uk-section-secondary uk-section-xsmall uk-container-expand">
+        <div class="uk-text-large uk-text-default" style="text-align: center;">anilog</div>
     </div>
+
+   
+
+    <div class=" uk-section-xsmall uk-container-expand">
+        <input id="add-name" type="text">
+        <button class=" uk-button-secondary" id="add-button" type="button">アニメを登録</button>
+    </div>
+
+    
+    <div class="uk-button-group">
+        <button id="0" class="uk-button uk-button-secondary " value="2021" type="button">2021</button>
+        <button id="1" class="uk-button uk-button-secondary " value="2020" type="button">2020</button>
+        <button id="2" class="uk-button uk-button-secondary " value="2019" type="button">2019</button>
+        <button id="3" class="uk-button uk-button-secondary " value="2018" type="button">2018</button>
+        <button id="4" class="uk-button uk-button-secondary " value="2017" type="button">2017</button>
+        <button id="5" class="uk-button uk-button-secondary " value="2016" type="button">2016</button>
+        <button id="6" class="uk-button uk-button-secondary " value="2015" type="button">2015</button>
+        <button id="7" class="uk-button uk-button-secondary " value="2014" type="button">2014</button>
+    </div>
+
+    <div class="uk-button-group">
+        <button id="10" class="uk-button uk-button-secondary" value="/1" type="button">春</button>
+        <button id="11" class="uk-button uk-button-secondary" value="/2" type="button">夏</button>
+        <button id="12" class="uk-button uk-button-secondary" value="/3" type="button">秋</button>
+        <button id="13" class="uk-button uk-button-secondary" value="/4" type="button">冬</button>
+    </div>
+
+    <div class=" uk-section-muted uk-section-small uk-container-expand">
+        <ul id="anime-list" class="scroll data-list ul-border"></ul>
+    </div>
+
+
+    <div class=" uk-section-secondary uk-section-xsmall uk-container-expand">
+        <div class="uk-text-large uk-text-default" style="text-align: center;">視聴予定リスト</div>
+    </div>
+
+
+    <div class=" uk-section-muted uk-section-small uk-container-expand ">
+        <ul id="name-list" class="scroll data-list ul-border"></ul>
+    </div>
+
+</div>
+
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>
